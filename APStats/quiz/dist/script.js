@@ -1,8 +1,8 @@
 // Creating questionss and answers
 //*****************************************************************************
 var question1 = {
-                  question: "What number logically follows this series? 4, 6, 9, 6, 14, 16, ?",
-                  answers: ["25", "19", "6", "20"],
+                  question: "What number logically follows this series? 4, 0, 9, 0, 14, 0, ?",
+                  answers: ["25", "19", "0", "20"],
                   correct: 1
                 };
 

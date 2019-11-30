@@ -7,7 +7,7 @@ var question1 = {
                 };
 
 var question3= {
-                  question: "Loading question... Please be patient. If question doesn't load in 15 seconds, click below",
+                  question: "Loading question... Please be patient. If question doesn't load in 15 seconds, click the green button below",
                   answers: [],
                   correct: 0
                 };

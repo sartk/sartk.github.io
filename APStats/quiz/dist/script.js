@@ -7,14 +7,14 @@ var question1 = {
                 };
 
 var question3= {
-                  question: "Loading question... Please be patient. If question doesn't load in 30 seconds, click below",
+                  question: "Loading question... Please be patient. If question doesn't load in 15 seconds, click below",
                   answers: [],
                   correct: 0
                 };
 
-var question2= {
-                  question: "What number logically follows this series? 3, 1.5, 1, 0.75, ?",
-                  answers: ['0.6', '0.5','0.375','0'],
+var question2 = {
+                  question: "What number logically follows this series? 3, 4.5, 6, 7.5, ?",
+                  answers: ['9', '8.5','9.5','10'],
                   correct: 0
                 };
 

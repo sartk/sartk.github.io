@@ -83,7 +83,7 @@ function showQuestions (){
 
     if(quizPage == 3){
       start();
-      button.innerHTML = ' ';;
+      button.innerHTML = 'Click her to reload';;
       reloaded = 1;
     }
 

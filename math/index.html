@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>math</title>
+
+  <!--  Styles  -->
+  <link rel="stylesheet" href="styles/index.processed.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <table align="center">
+      <tr>
+        <td>
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect small-text" for="add_1">
+      <input onclick = "insert('add_1')" type="checkbox" id="add_1" class="mdl-checkbox__input" checked>
+      <span class="mdl-checkbox__label">Addition (Level 1)</span>
+    </label>
+        </td>
+
+        <td>
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="add_2">
+        <input onclick = "insert('add_2')" type="checkbox" id="add_2" class="mdl-checkbox__input" checked>
+        <span class="mdl-checkbox__label">Addition (Level 2)</span>
+      </label>
+        </td>
+
+        <td>
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="mul">
+        <input onclick = "insert('mul')" type="checkbox" id="mul" class="mdl-checkbox__input" checked>
+        <span class="mdl-checkbox__label">Multiplication (20 x 20)</span>
+      </label>
+        </td>
+
+        <td>
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="sub">
+    <input onclick = "insert('sub')" type="checkbox" id="sub" class="mdl-checkbox__input" checked>
+    <span class="mdl-checkbox__label">Subtraction</span>
+  </label>
+        </td>
+
+        <td>
+          <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+        <input onclick = "togglestats()" type="checkbox" id="switch-2" class="mdl-switch__input">
+        <span class="mdl-switch__label">Enable Stats</span>
+        </label>
+        </td>
+      </tr>
+     
+
+    </table>
+    <table align="center">
+      <tr>
+        <td>
+          <br>
+          <BR>
+          <span id="problem" class="correct"> Press Enter to Begin </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+            <label class="mdl-textfield__label" for="sample4"></label>
+            <span class="mdl-textfield__error">Input is not a number</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span id="stats">0 out of 0 correct. Time/Question = 0 ms.</span>
+        </td>
+      </tr><tr><td>
+      <button class="mdl-button"  title="Copy as JSON">
+        <i class="material-icons md-18" onclick="logToClipboard()">file_copy</i></td></tr>
+    </button>
+    </table>
+
+  </div>
+
+  </div>
+
+  <script src="scripts/index.js"></script>
+</body>
+
+</html>

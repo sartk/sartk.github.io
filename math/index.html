@@ -16,7 +16,7 @@
 
 <body>
   <div class="container">
-    <table align="center">
+    <table align="center" class = "config">
       <tr>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect small-text" for="add_1">
@@ -44,14 +44,22 @@
     <input onclick = "insert('sub')" type="checkbox" id="sub" class="mdl-checkbox__input" checked>
     <span class="mdl-checkbox__label">Subtraction</span>
   </label>
-        </td>
-
+        </td></tr>
+      <tr>
         <td>
           <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
         <input onclick = "togglestats()" type="checkbox" id="switch-2" class="mdl-switch__input">
-        <span class="mdl-switch__label">Enable Stats</span>
+        <span class="mdl-switch__label">Stats</span>
         </label>
         </td>
+        
+         <td>
+          <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-3">
+        <input onclick = "toggleMic()" type="checkbox" id="switch-3" class="mdl-switch__input">
+        <span class="mdl-switch__label">Microphone</span>
+        </label>
+        </td>
+        
       </tr>
      
 

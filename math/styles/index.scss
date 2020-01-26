@@ -9,7 +9,7 @@ body {
 
 
 .container {
-  width: 70%;
+  width: 90%;
   height: 70%;
   background: #f0e68c;
   position:absolute; /*it can be fixed too*/
@@ -32,6 +32,10 @@ table{
   text-align: center;
 }
 
+.config{
+  width: 100%;
+  text-align: center;
+}
 .correct{
   font-size: large;
   color: #009933;

@@ -5,7 +5,7 @@
 var start;
 var totaltime = 0;
 var myArray = [];
-
+var mic = 0;
 var problemText = "";
 var module;
 
@@ -110,10 +110,24 @@ function nextProblem() {
   problemText = num1 + op + num2;
 
   document.getElementById("problem").innerHTML = problemText;
+  
+  if(mic){
+    var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition ||       window.msSpeechRecognition)();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 5;
+    recognition.start();
+
+    recognition.onresult = function(event) {
+      document.getElementById("sample4").value = event.results[0][0].transcript;
+    };
+  }
   //start = Date.getTime();
 }
 
 function showResult() {
+  
+  
   var elapsed = new Date().getTime() - start;
   totaltime += elapsed;
   //totaltime += Date.getTime() - start;
@@ -185,4 +199,13 @@ const copyToClipboard = str => {
 function logToClipboard(){
   copyToClipboard(JSON.stringify(myArray)); 
   alert("Log copied to clipboard")
+}
+
+function toggleMic(){
+  if(mic == 0){
+    mic = 1;
+  }
+  else{
+    mic = 0;
+  }
 }

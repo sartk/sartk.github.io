@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  width: 70%;
+  width: 90%;
   height: 70%;
   background: #f0e68c;
   position: absolute;
@@ -26,6 +26,11 @@ body {
 }
 
 table {
+  width: 100%;
+  text-align: center;
+}
+
+.config {
   width: 100%;
   text-align: center;
 }

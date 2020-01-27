@@ -57,6 +57,22 @@ window.addEventListener("keydown", e => {
       status = "result";
     }
   }
+  else if(e.which == 32 && mic){
+    var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition ||       window.msSpeechRecognition)();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 5;
+    recognition.start();
+
+    recognition.onresult = function(event) {
+      document.getElementById("sample4").value = event.results[0][0].transcript;
+      showResult();
+      status = "result";
+    };
+   
+    
+  }
+  
 });
 
 function randomModule() {
@@ -110,18 +126,7 @@ function nextProblem() {
   problemText = num1 + op + num2;
 
   document.getElementById("problem").innerHTML = problemText;
-  
-  if(mic){
-    var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition ||       window.msSpeechRecognition)();
-    recognition.lang = 'en-US';
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 5;
-    recognition.start();
-
-    recognition.onresult = function(event) {
-      document.getElementById("sample4").value = event.results[0][0].transcript;
-    };
-  }
+ 
   //start = Date.getTime();
 }
 

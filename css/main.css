@@ -140,8 +140,21 @@ h1 {
 }
 
 body {
+    background-image: url("http://i.imgur.com/T1h2VVS.gif");
+    background-repeat:repeat;
+    background-size: cover;
+
+
+
+    height: 100vh;
+    padding:0;
+    margin:0;
     color: white;
-    margin: 25px 25px 25px 25px;
+}
+
+a{
+  color: white;
+
 }
 
 img {

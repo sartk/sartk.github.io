@@ -1,87 +1,102 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-    body {
-        line-height: 1.4;
-        font-size: 16px;
-        padding: 0 10px;
-        margin: 50px auto;
-        max-width: 650px;
-    }
-    div.title {
-        font-weight: bold;
-    }
-    div.subtitle {
-        font-style: oblique;
-    }
-    .allegroupper {
-        margin-top: 1.0vw;
-        margin-bottom: 0.4vw;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        /* justify-content: center; */
-    }
-    .allegroupper > video {
-        max-width: 22%;
-        max-height: 22%;
-        margin-left: 0.2vw;
-        margin-right: 0.2vw;
-        border-radius: 0.5vw;
-    }
-    img {
-        border-radius: 0.5vw;
-    }
-    #maincontent
-    {
-        max-width: 42em;
-        margin: 15 auto;
-    }
+        body {
+            line-height: 1.4;
+            font-size: 16px;
+            padding: 0 10px;
+            margin: 50px auto;
+            max-width: 650px;
+        }
+        div.title {
+            font-weight: bold;
+        }
+        div.subtitle {
+            font-style: oblique;
+        }
+        .allegroupper {
+            margin-top: 5%;
+            margin-bottom: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+        }
+        .allegroupper > video {
+            max-width: 22%;
+            max-height: 22%;
+            margin: 1%;
+            border-radius: 0.5vw;
+        }
+        img {
+            border-radius: 0.5vw;
+            max-width: 100%;
+            height: auto;
+        }
+        #maincontent {
+            max-width: 100%;
+            margin: 15px auto;
+            padding: 10px;
+        }
+        @media (max-width: 768px) {
+            body {
+                margin: 20px auto;
+                padding: 0 5px;
+            }
+            .allegroupper > video {
+                max-width: 48%;
+                max-height: 48%;
+            }
+        }
+        @media (max-width: 480px) {
+            .allegroupper > video {
+                max-width: 98%;
+                max-height: 98%;
+            }
+        }
     </style>
-
     <title>Sarthak Kamat</title>
 </head>
-
 <body>
-    <div id="maincontent" style="margin-top:70px">
+    <div id="maincontent">
         <h2>Sarthak Kamat</h2>
-
-        <img src="assets/profilepic.jpeg" width="20%">
+        <img width="20%" src="assets/profilepic.jpeg" alt="Profile Picture">
         <p>I'm a Research Resident at Berkeley AI Research advised by <a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a> and <a href="https://people.eecs.berkeley.edu/~ilija/">Ilija Radosavovic</a>. I'm currently building general purpose controllers for humanoid robots.</p>
         <p>Before that, I studied Computer Science at UC Berkeley, where I graduated one year early and summa cum laude.</p>
 
-
         <h3>Research:</h3>
         <ul>
-        <li>
-            <div class="title">Humanoid Locomotion as Next Token Prediction</div>
-            <div>Ilija Radosavovic, Bike Zhang, Baifeng Shi, Jathushan Rajasegaran, Sarthak Kamat, <br>Trevor Darrell, Koushil Sreenath, Jitendra Malik</div>
-            <div class="allegroupper">
-                <video autoplay muted playsinline loop preload="metadata">
-                    <source src="assets/alta_plaza.mov" type="video/mp4">
-                </video>
-                <video autoplay muted playsinline loop preload="metadata">
-                    <source src="assets/city_hall.mov" type="video/mp4">
-                </video>
-                <video autoplay muted playsinline loop preload="metadata">
-                    <source src="assets/golden_gate_marina.mov" type="video/mp4">
-                </video>
-                <video autoplay muted playsinline loop preload="metadata">
-                    <source src="assets/palace_fine_art.mov" type="video/mp4">
-                </video>
-            </div>
-            <div>
-              <a href="https://arxiv.org/abs/2402.19469">[paper]</a>
-              <a href="https://humanoid-next-token-prediction.github.io">[website]</a>
-              <a href="https://twitter.com/ir413/status/1764057845845414245">[video]</a>
-            </div>
-        </li>
-        <li>
+            <li>
+                <div class="title">Humanoid Locomotion as Next Token Prediction</div>
+                <div>Ilija Radosavovic, Bike Zhang, Baifeng Shi, Jathushan Rajasegaran, Sarthak Kamat, <br>Trevor Darrell, Koushil Sreenath, Jitendra Malik</div>
+                <div class="allegroupper">
+                    <video autoplay muted playsinline loop preload="metadata">
+                        <source src="assets/alta_plaza.mov" type="video/mp4">
+                    </video>
+                    <video autoplay muted playsinline loop preload="metadata">
+                        <source src="assets/city_hall.mov" type="video/mp4">
+                    </video>
+                    <video autoplay muted playsinline loop preload="metadata">
+                        <source src="assets/golden_gate_marina.mov" type="video/mp4">
+                    </video>
+                    <video autoplay muted playsinline loop preload="metadata">
+                        <source src="assets/palace_fine_art.mov" type="video/mp4">
+                    </video>
+                </div>
+                <div>
+                    <a href="https://arxiv.org/abs/2402.19469">[paper]</a>
+                    <a href="https://humanoid-next-token-prediction.github.io">[website]</a>
+                    <a href="https://twitter.com/ir413/status/1764057845845414245">[video]</a>
+                </div>
+            </li>
+            <li>
                 <div class="title">Revisiting Generalizability in Deepfake Detection</div>
                 <div>Sarthak Kamat, Shruti Agarwal, Trevor Darrell, Anna Rohrbach</div>
                 <a href="https://openaccess.thecvf.com/content/ICCV2023W/DFAD/html/Kamat_Revisiting_Generalizability_in_Deepfake_Detection_Improving_Metrics_and_Stabilizing_Transfer_ICCVW_2023_paper.html">[ICCVw 2023, Oral]</a>
             </li>
-        <li>
+            <li>
                 <div class="title">Surface Spherical Encoding and Contrastive Learning for Virtual Bone Shape Aging </div>
                 <div>Francesco Caliva*, Sarthak Kamat*, Alejandro Morales Martinez, Sharmila Majumdar, Valentina Pedoia</div>
                 <a href="https://www.sciencedirect.com/science/article/abs/pii/S1361841522000408">[Medical Image Analysis]</a>
@@ -113,9 +128,7 @@
                     <a href="assets/cs-170-reflection.pdf">[writeup]</a>
                 </div>
             </li>
-
         </ul>
-
 
         <h3>Past Experience:</h3>
         <ul>
@@ -127,7 +140,8 @@
             <li>
                 <div class="title">Berkeley Vision Lab</div>
                 <div class="subtitle">Deepfake Detection Researcher (06/2022 - 03/2023)</div>
-                <div>I worked on building generalizable deepfake detection algorithms with <a href="https://anna-rohrbach.net">Anna Rohrbach</a> and <a href="https://agarwalshruti15.github.io">Shruti Agarwal</a>.            </li>
+                <div>I worked on building generalizable deepfake detection algorithms with <a href="https://anna-rohrbach.net">Anna Rohrbach</a> and <a href="https://agarwalshruti15.github.io">Shruti Agarwal</a>.</div>
+            </li>
             <li>
                 <div class="title">UCSF Center for Intelligent Imaging</div>
                 <div class="subtitle">Computer Vision Researcher (06/2021 - 08/2021)</div>
@@ -147,6 +161,6 @@
                 I taught machine learning to middle schoolers at public libraries in San Jose with <a href="https://developer.nvidia.com/blog/author/sahilj/">Sahil Jain</a>.
             </li>
         </ul>
-
     </div>
-
+</body>
+</html>

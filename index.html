@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link target="_blank" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
+
+    /* $color-primary: hsl(0, 0%, 10%);
+    $color-text: hsl(0, 0%, 20%);
+    $color-subtext: hsl(0, 0%, 30%);
+    $color-border: hsl(0, 0%, 85%);
+    $color-box-background: mix($color-primary, white, 4%);
+    $border-radius: 4px;
+    $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; */
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
             line-height: 1.4;
@@ -13,11 +23,36 @@
             margin: 50px auto;
             max-width: 650px;
         }
+
+        a {
+            transition: background 300ms;
+            padding: 0 0.1em;
+            text-decoration: none;
+            border-bottom: 1px solid hsl(0, 0%, 85%);
+            color: hsl(0, 0%, 10%);
+            &:hover {
+                color: black !important;
+                background: #fffaf1;
+            }
+            &:after {
+                position: relative;
+                top: -0.5em;
+                font-size: 0.7em;
+                content: "↗";
+                color: #aaaaaa;
+            }
+            &.internal-link:after,
+            &.footnote:after,
+            &.reversefootnote:after {
+                content: "";
+            }
+        }
+
         div.title {
             font-weight: bold;
         }
         div.subtitle {
-            font-style: oblique;
+            font-style: italic;
         }
         .allegroupper {
             margin-top: 2%;
@@ -65,8 +100,8 @@
     <div id="maincontent">
         <h2>Sarthak Kamat</h2>
         <img width="20%" src="assets/profilepic.jpeg" alt="Profile Picture">
-        <p>I'm a Research Resident at Berkeley AI Research advised by <a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a> and <a href="https://people.eecs.berkeley.edu/~ilija/">Ilija Radosavovic</a>. I'm currently building general purpose controllers for humanoid robots.</p>
-        <p>Before that, I studied Computer Science at UC Berkeley, where I graduated one year early and summa cum laude.</p>
+        <p>I'm a Research Resident at Berkeley AI Research advised by <a target="_blank" href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a> and <a target="_blank" href="https://people.eecs.berkeley.edu/~ilija/">Ilija Radosavovic</a>. I'm currently building general purpose controllers for humanoid robots.</p>
+        <p>Before that, I studied Computer Science at UC Berkeley, where I graduated summa cum laude.</p>
 
         <h3>Research:</h3>
         <ul>
@@ -78,30 +113,23 @@
                         <source src="assets/alta_plaza.mov" type="video/mp4">
                     </video>
                     <video autoplay muted playsinline loop preload="metadata">
-                        <source src="assets/city_hall.mov" type="video/mp4">
-                    </video>
-                    <video autoplay muted playsinline loop preload="metadata">
                         <source src="assets/golden_gate_marina.mov" type="video/mp4">
-                    </video>
-                    <video autoplay muted playsinline loop preload="metadata">
-                        <source src="assets/palace_fine_art.mov" type="video/mp4">
                     </video>
                 </div>
                 <div>
-                    <a href="https://arxiv.org/abs/2402.19469">[paper]</a>
-                    <a href="https://humanoid-next-token-prediction.github.io">[website]</a>
-                    <a href="https://twitter.com/ir413/status/1764057845845414245">[video]</a>
+                    <a target="_blank" href="https://arxiv.org/abs/2402.19469">arXiv</a>
+                    <a target="_blank" href="https://humanoid-next-token-prediction.github.io">website</a>
                 </div>
             </li>
             <li><p>
                 <div class="title">Revisiting Generalizability in Deepfake Detection</div>
                 <div>Sarthak Kamat, Shruti Agarwal, Trevor Darrell, Anna Rohrbach</div>
-                <a href="https://openaccess.thecvf.com/content/ICCV2023W/DFAD/html/Kamat_Revisiting_Generalizability_in_Deepfake_Detection_Improving_Metrics_and_Stabilizing_Transfer_ICCVW_2023_paper.html">[ICCVw 2023, Oral]</a>
+                <a target="_blank" href="https://openaccess.thecvf.com/content/ICCV2023W/DFAD/html/Kamat_Revisiting_Generalizability_in_Deepfake_Detection_Improving_Metrics_and_Stabilizing_Transfer_ICCVW_2023_paper.html">ICCV 2023 oral</a>
             </p></li>
             <li><p>
                 <div class="title">Surface Spherical Encoding and Contrastive Learning for Virtual Bone Shape Aging </div>
                 <div>Francesco Caliva*, Sarthak Kamat*, Alejandro Morales Martinez, Sharmila Majumdar, Valentina Pedoia</div>
-                <a href="https://www.sciencedirect.com/science/article/abs/pii/S1361841522000408">[Medical Image Analysis]</a>
+                <a target="_blank" href="https://www.sciencedirect.com/science/article/abs/pii/S1361841522000408">MIDL 2021 special issue</a>
             </p></li>
         </ul>
 
@@ -117,8 +145,8 @@
                     </video>
                 </div>
                 <div>
-                    <a href="https://sites.google.com/berkeley.edu/cs184-final-project-final-repo/home">[website]</a>
-                    <a href="https://cs184.eecs.berkeley.edu/sp23/docs/final_showcase">[showcase]</a>
+                    <a target="_blank" href="https://sites.google.com/berkeley.edu/cs184-final-project-final-repo/home">website</a>
+                    <a target="_blank" href="https://cs184.eecs.berkeley.edu/sp23/docs/final_showcase">showcase</a>
                 </div>
                 </p>
             </li>
@@ -127,42 +155,42 @@
                 <div>Araav Patel, Sarthak Kamat, Vincent Lim</div>
                 <div class="subtitle">4th place out of 180, Fall 2021</div>
                 <div>
-                    <a href="https://berkeley-cs170.github.io/project-leaderboard-fa21/">[leaderboard]</a>
-                    <a href="assets/cs-170-reflection.pdf">[writeup]</a>
+                    <a target="_blank" href="https://berkeley-cs170.github.io/project-leaderboard-fa21/">leaderboard</a>
+                    <a target="_blank" href="assets/cs-170-reflection.pdf">writeup</a>
                 </div>
             </p>
             </li>
         </ul>
 
-        <h3>Past Experience:</h3>
+        <h3>Other Experience:</h3>
         <ul>
-            <li>
+            <li><p>
                 <div class="title">Hudson River Trading</div>
                 <div class="subtitle">Algorithm Developer Intern (summer 2023)</div>
                 <div>I trained low-latency models for automated trading, and wrote algorithms for arbitrage detection in C++.</div>
-            </li>
-            <li>
+            </p></li>
+            <li><p>
                 <div class="title">Berkeley Vision Lab</div>
-                <div class="subtitle">Deepfake Detection Researcher (06/2022 - 03/2023)</div>
-                <div>I worked on building generalizable deepfake detection algorithms with <a href="https://anna-rohrbach.net">Anna Rohrbach</a> and <a href="https://agarwalshruti15.github.io">Shruti Agarwal</a>.</div>
-            </li>
-            <li>
+                <div class="subtitle">Deepfake Detection Researcher (summer 2022 - spring 2023)</div>
+                <div>I worked on building generalizable deepfake detection algorithms with <a target="_blank" href="https://anna-rohrbach.net">Anna Rohrbach</a> and <a target="_blank" href="https://agarwalshruti15.github.io">Shruti Agarwal</a>.</div>
+            </p></li>
+            <li><p>
                 <div class="title">UCSF Center for Intelligent Imaging</div>
-                <div class="subtitle">Computer Vision Researcher (06/2021 - 08/2021)</div>
-                <div>I trained a 3D generative model for virtual bone shape aging to model the onset of osteoarthritis. I was mentored by <a href="https://www.linkedin.com/in/francesco-caliva/">Francesco Caliva</a> and <a href="https://profiles.ucsf.edu/valentina.pedoia">Valentina Pedoia</a>.</div>
-            </li>
+                <div class="subtitle">Computer Vision Researcher (summer 2021)</div>
+                <div>I trained a 3D generative model for virtual bone shape aging to model the onset of osteoarthritis. I was mentored by <a target="_blank" href="https://www.linkedin.com/in/francesco-caliva/">Francesco Caliva</a> and <a target="_blank" href="https://profiles.ucsf.edu/valentina.pedoia">Valentina Pedoia</a>.</div>
+            </p></li>
         </ul>
 
         <h3>Teaching:</h3>
         <ul>
             <li>
-                Course Assistant and Reader for <a href="https://www2.eecs.berkeley.edu/Courses/EECS127/">EECS 127</a> (Optimization Models in Engineering), Spring 2022. 
+                Course Assistant and Reader for <a target="_blank" href="https://www2.eecs.berkeley.edu/Courses/EECS127/">EECS 127</a> (Optimization Models in Engineering), Spring 2022. 
             </li>
             <li>
-                Academic Intern for <a href="https://web.archive.org/web/20231202054849/https://inst.eecs.berkeley.edu/~cs61a/fa21/academic-interns/">CS 61A</a> in Fall 2022, the intro CS class at UC Berkeley.
+                Academic Intern for <a target="_blank" href="https://web.archive.org/web/20231202054849/https://inst.eecs.berkeley.edu/~cs61a/fa21/academic-interns/">CS 61A</a> in Fall 2022, the intro CS class at UC Berkeley.
             </li>
             <li>
-                I taught machine learning to middle schoolers at public libraries in San Jose with <a href="https://developer.nvidia.com/blog/author/sahilj/">Sahil Jain</a>.
+                I taught machine learning to middle schoolers at public libraries in San Jose with <a target="_blank" href="https://developer.nvidia.com/blog/author/sahilj/">Sahil Jain</a>.
             </li>
         </ul>
     </div>

@@ -22,6 +22,7 @@
             padding: 0 10px;
             margin: 50px auto;
             max-width: 650px;
+            background-color: #f0eee6;
         }
 
         .email {
@@ -98,16 +99,52 @@
                 max-height: 98%;
             }
         }
+        .intro-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap; /* fallback for small screens */
+            flex-direction: row; /* default: image left, text right */
+        }
+
+        .profile-pic {
+            max-width: 200px;
+            height: auto;
+            border-radius: 0.5vw;
+            flex-shrink: 0;
+        }
+
+        .intro-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        /* On small screens: stack vertically, image first */
+        @media (max-width: 768px) {
+            .intro-container {
+                flex-direction: column;
+            }
+
+            .profile-pic {
+                align-self: center;
+            }
+        }
+
+
     </style>
     <title>Sarthak Kamat</title>
 </head>
 <body>
     <div id="maincontent">
         <h1>Sarthak Kamat</h1>
-        <img width="50%" src="assets/gradpic.jpg" alt="Profile Picture">
         <p class="email">email: sartk at berkeley dot edu</p>
-        <p>I'm a researcher at <a target="_blank" href="https://www.hudsonrivertrading.com/about/"> HRT AI Labs (HAIL)</a>, working on deep learning models for systematic trading.</p>
-        <p>During my undergraduate studies at UC Berkeley, I worked on research in computer vision and robotics. I was advised by <a target="_blank" href="https://people.eecs.berkeley.edu/~trevor/">Prof. Trevor Darrell</a>, <a target="_blank" href="https://people.eecs.berkeley.edu/~malik/">Prof. Jitendra Malik</a>, <a href="https://anna-rohrbach.net/">Prof. Anna Rohrbach</a> and <a target="_blank" href="https://people.eecs.berkeley.edu/~ilija/">Ilija Radosavovic</a>.</p>
+    <div class="intro-container">
+        <img class="profile-pic" src="assets/gradpic.jpg" alt="Profile Picture">
+        <div class="intro-text">
+            <p>I'm a researcher at <a target="_blank" href="https://www.youtube.com/watch?v=5wM5ateK99k"> HRT AI Labs (HAIL)</a>, working on deep learning models for systematic trading.</p>
+            <p>During my undergraduate studies at UC Berkeley, I worked on research in computer vision and robotics. I was advised by <a target="_blank" href="https://people.eecs.berkeley.edu/~trevor/">Prof. Trevor Darrell</a>, <a target="_blank" href="https://people.eecs.berkeley.edu/~malik/">Prof. Jitendra Malik</a>, <a href="https://anna-rohrbach.net/">Prof. Anna Rohrbach</a>, and <a target="_blank" href="https://people.eecs.berkeley.edu/~ilija/">Ilija Radosavovic</a>.</p>
+        </div>
+    </div>
         <h3>Selected Papers</h3>
         <ul>
             <li><p>
